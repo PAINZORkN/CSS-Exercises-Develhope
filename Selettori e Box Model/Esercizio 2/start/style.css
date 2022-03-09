@@ -1,0 +1,41 @@
+/* !TABLE  */
+
+table {
+  border: 1px solid #263238;
+  width: 50%;
+}
+
+caption {
+  color: #263238;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+thead {
+  background-color: #455a64;
+  color: white;
+  font-weight: 700;
+}
+
+tr td:nth-child(2) {
+  color: #003300;
+  text-align: right;
+}
+
+tr td:nth-child(3) {
+  color: #7f0000;
+  text-align: right;
+}
+
+tbody > tr:nth-child(even) {
+  background: #eceff1;
+}
+tbody > tr:nth-child(odd) {
+  background: #b0bec5;
+}
+
+tfoot {
+  background-color: #78909c;
+  font-weight: 800;
+}
