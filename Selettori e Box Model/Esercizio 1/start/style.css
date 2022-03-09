@@ -1,0 +1,42 @@
+blockquote {
+  background-color: rgba(0, 0, 0, 0.12);
+  padding: 8px;
+}
+
+a {
+  color: fuchsia;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orangered;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+h1 + p::first-letter {
+  float: left;
+  color: darkred;
+  border: 3px ridge darkgoldenrod;
+  padding: 16px;
+  background-color: gold;
+  margin: 8px;
+  font-size: 30px;
+}
+
+blockquote::before {
+  color: orangered;
+  content: open-quote;
+  font-size: 1.5em;
+}
+
+blockquote::after {
+  color: orangered;
+  content: close-quote;
+  font-size: 1.5em;
+}
