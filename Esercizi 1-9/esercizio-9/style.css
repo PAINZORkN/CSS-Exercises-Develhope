@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --first-color: #b4b4b4;
+  --second-color: #b4b3b3;
+}
+
+html * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #5e5e5e;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--second-color);
+  margin-left: 2em;
+  border-radius: 0.7em;
+  border-bottom-style: outset;
+  height: 460px;
+  width: 330px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.card-image1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1.9em;
+  padding-bottom: 9px;
+}
+
+.card-image2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1.9em;
+  padding-bottom: 9px;
+}
+
+.card-image3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1.9em;
+  padding-bottom: 9px;
+}
+
+.card-image1,
+.card-image2,
+.card-image3 h1 {
+  color: #333333;
+}
+
+.circle_dots {
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 0.3em;
+  left: 1em;
+}
+
+.cat1 {
+  background-image: url("assets/images/cat1.jpeg");
+  height: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cat2 {
+  background-image: url("assets/images/cat2.jpeg");
+  height: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cat3 {
+  background-image: url("assets/images/cat3.jpeg");
+  height: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fh1 {
+  color: black;
+  margin-left: 70px;
+  font-size: 15px;
+}
+
+.fp {
+  color: white;
+  margin-left: 70px;
+  font-size: 13px;
+}
+
+.icons {
+  margin-top: 1.3em;
+  margin-left: 1.2em;
+}
+
+.icons img {
+  padding: 0 3px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.plast {
+  padding: 10px 10px;
+}
+
+/* .circle {
+  background-color: #fff;
+  height: 40px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 40px;
+} */
+
+@media only screen and (max-width: 950px) {
+  .container {
+    flex-wrap: wrap;
+    margin-top: 4em;
+  }
+
+  .card {
+    margin-bottom: 2em;
+  }
+
+}
+
+/* !MOBILE */
+@media screen and (max-width: 739px) {
+  .card {
+    margin-bottom: 1.8em;
+  }
+
+  @media screen and (max-width: 308px) {
+
+    .card {
+    overflow-y:hidden;
+    padding-bottom: 10px;
+    }
+  }

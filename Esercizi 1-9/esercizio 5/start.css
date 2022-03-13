@@ -1,0 +1,51 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 60em;
+  margin: 0 auto;
+}
+
+section {
+  padding: 2em;
+  margin: 1em;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  padding: 1em;
+  display: block;
+  margin: 1em;
+}
+
+#green {
+  grid-column: span 3;
+  background-color: #8ffda7;
+}
+
+#yellow {
+  grid-row: span 2;
+  background-color: #ffff92;
+}
+
+#orange {
+  background-color: #ffc788;
+}
+
+#blue {
+  background-color: #98d2ff;
+}
+
+#orange,
+#blue {
+  height: 50%;
+}
+
+#red {
+  grid-row: span 2;
+  background-color: #ff919c;
+}
