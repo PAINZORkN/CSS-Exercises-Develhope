@@ -50,6 +50,9 @@ li {
   margin: 1em;
 }
 
+#yellow ul {
+}
+
 #yellow ul > li {
   grid-area: yli;
 }
