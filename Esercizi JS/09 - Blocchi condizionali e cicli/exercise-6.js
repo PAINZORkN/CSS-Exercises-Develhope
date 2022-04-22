@@ -1,8 +1,7 @@
 function getKeys(obj) {
 
-for(let key in person){
-console.log(key)
-}
+const getKeys = Object.keys(person);
+console.log(getKeys);
 
 }
 
@@ -15,4 +14,4 @@ const person = {
 };
 
 const keys = getKeys(person);
-console.log(keys);
+

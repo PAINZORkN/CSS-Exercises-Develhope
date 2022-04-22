@@ -1,6 +1,21 @@
 function createStore() {
-  // ...
-}
+
+  let products = [];
+
+  return function list (product) {
+    
+    products.push(product);
+
+    console.log(products);
+ 
+  }
+
+  }
+
+  
+
+
+
 
 const redPants = { id: 1, name: 'Red Pants' };
 const whiteHat = { id: 2, name: 'White Hat' };
