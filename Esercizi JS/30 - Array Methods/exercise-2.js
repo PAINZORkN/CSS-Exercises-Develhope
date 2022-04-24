@@ -1,14 +1,12 @@
 function nicknameMap(persons) {
+  
+  let nickOfPersons = [];
 
-let nicks = [];
+  for(i=0; i<persons.length; i++){
+    nickOfPersons.push({nickname: persons[i].name + '-' + persons[i].age});
+  }
 
-for(i = 0; i<persons.length; i++) {
-nicks.push({nickname: persons[i].name +  persons[i].age})
-
-}
-
-return nicks
-
+return nickOfPersons;
 }
 
 const persons = [
@@ -26,4 +24,4 @@ const persons = [
 
 const nicknames = nicknameMap(persons);
 console.log(persons);
-console.log(nicknames); //console.log(nicknameMap(persons))
+console.log(nicknames);

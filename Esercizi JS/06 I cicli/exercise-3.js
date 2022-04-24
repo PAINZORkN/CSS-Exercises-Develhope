@@ -1,20 +1,46 @@
- function foo(param) {
-   // ciclo su persons
-
-   // creare nuovo array di persone maggiorenni 
-
+ function adultFilter(param) {
+ 
+ 
+/*
   let arrayMaggiorenni = [];
 
-  for (let i = 0; i<param.length; i++) {
-    
-    return i
 
-   }
+  for(const item of param){
+    if(item.age>=18){
+      arrayMaggiorenni.push(item);
+    }
+  }
+
+  return arrayMaggiorenni;
+
+ } */
 
 
+/*
+  let arrayMaggiorenni = [];
+
+  for(item of persons){
+    if(item.age>=18){
+      arrayMaggiorenni.push(item);
+    }
+  }
+  return arrayMaggiorenni;
+
+} */
 
 
- }
+/*
+let arrayMaggiorenni = [];
+
+for(let i=0 ; i<persons.length; i++){
+  if(persons[i].age>=18){
+    arrayMaggiorenni.push(persons[i]);
+  }
+}
+return arrayMaggiorenni;
+} */
+
+
 
 
  const persons = [
@@ -31,16 +57,9 @@
  ];
 
 
- const adults = foo(persons);
+ const adults = adultFilter(persons);
  console.log(persons);
- console.log(adults);
+  console.log(adults);
 
 
 
-// let ciao = ["ciao",1,"blue",2];
-
-// for(i = 0; i<ciao.length; i++){
-//     console.log(ciao[i])
-// }
-
-// ciao();
