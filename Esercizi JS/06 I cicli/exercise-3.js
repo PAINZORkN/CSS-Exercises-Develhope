@@ -1,21 +1,6 @@
 function adultFilter(param) {
 
 
-  /* 
-    let arrayMaggiorenni = [];
-  
-  
-    for(const item of param){
-      if(item.age>=18){
-        arrayMaggiorenni.push(item);
-      }
-    }
-  
-    return arrayMaggiorenni;
-  
-   } */
-
-
   /*
     let arrayMaggiorenni = [];
   
@@ -32,9 +17,9 @@ function adultFilter(param) {
 
   let arrayMaggiorenni = [];
 
-  for (let i = 0; i < persons.length; i++) {
-    if (persons[i].age >= 18) {
-      arrayMaggiorenni.push(persons[i]);
+  for (let i = 0; i < param.length; i++) {
+    if (param[i].age >= 18) {
+      arrayMaggiorenni.push(param[i]);
     }
   }
   return arrayMaggiorenni;
