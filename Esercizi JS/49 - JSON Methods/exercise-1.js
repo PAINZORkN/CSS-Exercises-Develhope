@@ -9,8 +9,6 @@ class Person {
 
 const developer = new Person(1, 'Mario', 'Rossi', 25);
 
+let devjson = JSON.stringify(developer);
 
-const dev = JSON.stringify(developer)
-
-
-console.log(developer)
+console.log(devjson);
