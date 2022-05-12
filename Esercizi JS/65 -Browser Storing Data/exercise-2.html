@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">
+        Fetch Post from LocalStorage
+      </button>
+
+      <h2>Post: <span id="post-title"></span></h2>
+    </div>
+  </body>
+</html>
+
+<script>
+  let postSpan = document.getElementById("post-title");
+
+  document.getElementById("fetch-post").onclick = () => {
+    console.log("Sto recuperando il post dalla localStorage!");
+
+    let jsonPost = JSON.parse(localStorage.getItem("body"));
+    postSpan.insertAdjacentText("afterbegin", jsonPost.body);
+  };
+</script>

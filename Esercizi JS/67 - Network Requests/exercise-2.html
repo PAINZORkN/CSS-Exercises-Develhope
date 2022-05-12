@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center"></div>
+  </body>
+</html>
+
+<script>
+  let recoverTitle = " ";
+  window.addEventListener("load", async () => {
+    await fetch("https://jsonplaceholder.typicode.com/todos/4")
+      .then((response) => response.json())
+      .then((data) => {
+        recoverTitle = data.title;
+        console.log(recoverTitle);
+      })
+      .catch((error) => console.log(error));
+
+    let elemH2 = document.createElement("h2");
+    elemH2.innerHTML = recoverTitle;
+    let checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.setAttribute("checked", true);
+    console.log(elemH2);
+    document
+      .getElementById("container")
+      .appendChild(elemH2)
+      .appendChild(checkBox);
+  });
+</script>
