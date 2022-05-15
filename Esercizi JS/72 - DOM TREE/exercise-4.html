@@ -20,8 +20,9 @@
 </html>
 
 <script>
-  let person = { firsName: "", lastName: "", age: "" };
-  let form = document.querySelector("form");
+  const person = { firsName: "", lastName: "", age: "" };
+  const form = document.querySelector("form");
+
   for (i = 0; i < form.children.length; i++) {
     let id = form.children[i].querySelector("input").id;
     let value = form.children[i].querySelector("input").value;
