@@ -3,32 +3,25 @@ import React, { Component } from 'react';
 export class TodoList3 extends Component {
 
     state = {
-        todo: [],
-        input: ''
+        items: [],
+        todo: '',
         
     };
 
-    saveInput = (e) => {
-        this.setState({ input: e.target.value });
+    handleChange = (e) => {
+        this.setState({ todo: e.target.value });
 
     };
 
-    newTodo = (e) => {
-        e.preventDefault();
-        let { todo} = this.state;
-        e.target.elements.input.value = '';
-        todo.push(todo)
-        this.setState({
-            input: ''
-        })
-
-        
+    addItems = () => {
+        this.state.items.push(this.state.todo)
+        this.setState({todo: ''})
     }
+    
 
-    onReset = (e) => {
-        e.preventDefault();
+    onReset = () => {
         this.setState({
-            todo: []
+            items: []
         })
 
     }
@@ -36,13 +29,11 @@ export class TodoList3 extends Component {
     render() {
         return (
             <>
-                <form onSubmit={this.newTodo}>
-                    <input name='input' onChange={this.saveInput} />
-                    <button type='submit'>Add Todo </button>
+                    <input name='input' onChange={this.handleChange} value={this.state.todo} />
+                    <button type='button' onClick={this.addItems}>Add Todo </button>
                     <button onClick={this.onReset}>Reset</button>
-                </form>
                 <ul>
-                    {this.state.todo.map((item, i) => {
+                    {this.state.items.map((item, i) => {
                         return <li key={i}> {item}</li>
                     })}
                 </ul>
