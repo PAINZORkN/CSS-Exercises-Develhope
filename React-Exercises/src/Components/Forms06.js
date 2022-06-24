@@ -17,16 +17,13 @@ class UncontrolledLogin2 extends React.Component {
     });
   };
 
-  handleFocus = () => {
-    this._formRef.current.focus();
-  };
 
   render() {
     return (
       <>
         <form onSubmit={this.handleFormSubmit}>
           <h3>Uncontrolled Form FocusMode</h3>
-          <input name="username" ref={this._formRef} autoFocus />
+          <input name="username" autoFocus />
           <input name="password" type="password" />
           <input name="remember" type="checkbox" />
 
@@ -38,3 +35,7 @@ class UncontrolledLogin2 extends React.Component {
 }
 
 export default UncontrolledLogin2;
+
+
+// Modify the UncontrolledLogin component so that the username input is automatically
+// focused when the component renders the first time.
