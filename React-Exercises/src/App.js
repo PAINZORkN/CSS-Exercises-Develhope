@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Welcome from './Components/Props01';
+import WelcomeTwo from './Components/Props03';
+import WelcomeStrong from './Components/Props04';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Welcome name="PAINZOR" />
+      <WelcomeTwo age="23" />
+      <WelcomeStrong name={<strong> PAINZOR </strong>} />
     </div>
   );
 }
