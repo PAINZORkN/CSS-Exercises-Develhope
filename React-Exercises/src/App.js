@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react';
+import './App.css';
+import Clock from './Components/Clock';
+
+import { LanguageContext } from './Components/Context01';
+import { DisplayLanguage } from './Components/Context02';
+
+export class App extends React.Component {
+
+  state = {
+    language: 'en',
+  }
+
+  handleLanguageChange = (e) => {
+    this.setState({
+      language: e.target.value
+    })
+  }
+
+
+  render() {
+    return (
+      <>
+        <select value={this.state.language} onChange={this.handleLanguageChange}>
+          <option value="en">ENGLISH</option>
+          <option value="it">ITALIANO</option>
+        </select>
+        <LanguageContext.Provider value={this.state.language} >
+          <Clock />
+          <DisplayLanguage />
+        </LanguageContext.Provider>
+
+
+      </>
+    )
+  }
 }
 
 export default App;
