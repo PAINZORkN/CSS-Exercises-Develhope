@@ -10,10 +10,11 @@ class Login3 extends React.Component {
   handleValue = (e) => {
     const value = e.target.value;
     const name = e.target.name;
+    const password = e.target.password
 
     this.setState({
       [name]: value,
-      username: value,
+      [password]: value,
     });
   };
 
@@ -42,7 +43,7 @@ class Login3 extends React.Component {
   render() {
     return (
       <>
-        <h1> My Form</h1>
+        <h1> My Form04</h1>
         <input
           name="username"
           type="text"
@@ -64,12 +65,10 @@ class Login3 extends React.Component {
 
         <button
           name="button"
-          type="button"
+          type="submit"
           onClick={this.onLogin}
           disabled={
-            this.state.username === "" || this.state.password === ""
-              ? true
-              : false
+            this.state.username === "" || this.state.password === "" ? true : false
           }
         >
           Click me!

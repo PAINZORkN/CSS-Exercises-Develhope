@@ -10,10 +10,11 @@ class Login extends React.Component {
   handleValue = (e) => {
     const value = e.target.value;
     const name = e.target.name;
+    const password = e.target.password
 
     this.setState({
       [name]: value,
-      username: value,
+      [password]: value,
     });
   };
 
@@ -29,7 +30,7 @@ class Login extends React.Component {
   render() {
     return (
       <>
-        <h1> My Form</h1>
+        <h1> My Form02</h1>
         <input
           name="username"
           type="text"
