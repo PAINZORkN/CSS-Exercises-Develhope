@@ -11,6 +11,20 @@ root.render(
   </React.StrictMode>
 );
 
+/*
+fetch(`https://api.github.com/users/PAINZORkN`)
+  .then(response => {
+    console.log(`Response status: ${response.status}`)
+
+    return response.json()
+
+  })
+  .then(json => {
+    console.log(json)
+  })
+
+  */
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
