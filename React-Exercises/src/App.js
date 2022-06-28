@@ -28,7 +28,7 @@ export class App extends React.Component {
         </select>
         <LanguageContext.Provider value={this.state.language} >
           <Clock />
-          <DisplayLanguage />
+          {/* <DisplayLanguage /> */}
         </LanguageContext.Provider>
 
 
