@@ -1,11 +1,11 @@
-import { useCounter } from "./useCounter"
+import { UseCounter } from "./UseCounter"
 
 
 
 export function HookCounter({ initialValue = 0 }) {
 
 
-    const { counter, onIncrement, onDecrement, onReset } = useCounter(initialValue)
+    const { counter, onIncrement, onDecrement, onReset } = UseCounter(initialValue)
     return (
         <div>
             <h2>Counter : {counter}</h2>
