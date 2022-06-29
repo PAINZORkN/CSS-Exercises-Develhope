@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { ClickCounter } from './Components/Counter';
+import { GithubUser } from './Components/GithubUser';
+import { GithubUsersList } from './Components/GithubUserList';
+import { NotFound } from './Components/NotFound';
+import { Welcome } from './Components/Welcome';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <div className="App">
+
+        <div>
+          <ul>
+            <li>
+              <Link to="/" > Welcome </Link>
+            </li>
+            <li>
+              <Link to="/counter" > Counter </Link>
+            </li>
+            <li>
+              <Link to="/users/:username" > Username </Link>
+            </li>
+            <li>
+              <Link to="*" > NotFound </Link>
+            </li>
+          </ul>
+
+        </div>
+        <Routes>
+
+          <Route path="/" element={<Welcome name="PAINZOR" />} />
+          <Route path="/counter" element={<ClickCounter />} />
+          <Route path="/users/:username" element={<GithubUser username="PAINZORkN" />} />
+          <Route path="*" element={<NotFound />} />
+
+          <Route path="/users" element={<GithubUsersList />} >
+            <Route path=":username" element={<GithubUser />} />
+          </Route>
+
+
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
