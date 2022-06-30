@@ -6,27 +6,24 @@ export function UseCounter(initialValue = 0) {
 
     const [counter, setCounter] = useState(initialValue)
 
-    const handleIncrement = useCallback(function handleIncrement() {
-        setCounter(counter + 1)
+    const handleIncrement = useCallback(() => {
+        setCounter((prevState) => prevState + 1)
     }, [])
 
-    const handleDecrement = useCallback(function handleDecrement() {
-        setCounter(counter - 1)
+    const handleDecrement = useCallback(() => {
+        setCounter((prevState) => prevState - 1)
     }, [])
 
-    const handleReset = useCallback(function handleReset() {
-        setCounter((initialValue))
+    const handleReset = useCallback(() => {
+        setCounter(initialValue)
     }, [initialValue])
 
-    return (
+    return {
+        counter,
+        onIncrement: handleIncrement,
+        onDecrement: handleDecrement,
+        onReset: handleReset
+    }
 
-        {
-            counter: counter,
-            onIncrement: handleIncrement,
-            onDecrement: handleDecrement,
-            onReset: handleReset
 
-        }
-
-    )
 }

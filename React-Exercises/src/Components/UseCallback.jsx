@@ -12,7 +12,6 @@ export function HookCounter({ initialValue = 0 }) {
             <button onClick={onIncrement}>Increment</button>
             <button onClick={onDecrement}>Decrement</button>
             <button onClick={onReset}>Reset</button>
-
         </div>
 
     )
