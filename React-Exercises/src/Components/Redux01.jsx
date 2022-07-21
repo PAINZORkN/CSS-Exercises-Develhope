@@ -4,23 +4,23 @@ const INCREMENT = 'COUNTER@INCREMENT';
 const DECREMENT = 'COUNTER@DECREMENT';
 const RESET = 'COUNTER@RESET';
 
-export function inc (by = 1) {
+export function increment (by = 1) {
     return {
-        type: "INCREMENT",
+        type: INCREMENT,
         payload: by
     }
 }
 
-export function dec (by = 1) {
+export function decrement (by = 1) {
     return {
-        type: "DECREMENT",
+        type: DECREMENT,
         payload: by
     }
 }
 
-export function res () {
+export function reset () {
     return {
-        type: "RESET",
+        type: RESET,
     }
 }
 
